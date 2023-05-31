@@ -8,6 +8,8 @@ var singleTripPrice = document.querySelector('.singleTrip')
 var numSingleTrips = document.querySelector('.singleNum')
 var returnPrice = document.querySelector('.returnPrice')
 var numReturn = document.querySelector('.numReturn')
+var display = document.querySelector('.message')
+var box = document.querySelector('.box')
 
 // instantiate the factory function
 var bus = BusFunction()
@@ -46,6 +48,12 @@ btn.addEventListener('click', () => {
 
         singleTripPrice.innerHTML = bus.pricePerTripSingle()
         numSingleTrips.innerHTML = bus.numSingleTrips()
+
+    }
+    else {
+        display.innerHTML = 'Did you forget to select travel time?'
+        box.classList.add('box')
+        box.style.display = 'block'
 
     }
 })

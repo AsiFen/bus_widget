@@ -10,45 +10,54 @@
 </head>
 
 <body>
-    <h1> Bus Travel Widget</h1>
-    <section>
-        <label>Enter amount:</label>
-        <input type="text" name="points" class="points" id="points">
+    <div class="container">
 
-        <label>Select location:</label>
-        <select>
-            <option value="Khayelitsha">Khayelitsha</option>
-            <option value="Dunoon">Dunoon</option>
-            <option value="Mitchells Plain">Mitchells Plain</option>
-        </select>
 
-        <label for="">Travel times:</label>
-        <div class="">
-            <div class="radios">
-                <input type="radio" class="choice" name="peak" id="peak" value="peak">
-                <label for="">Peak</label>
-                <br>
-                <input type="radio" class="choice" name="peak" id="peak" value="offpeak">
-                <label for="">Off-peak</label>
-            </div>
+        <h1> Bus Travel Widget</h1>
+        <section>
+            <label>Enter amount:</label>
+            <input type="text" name="points" class="points" id="points">
 
-            <input type="checkbox" name="checkybox" class="return" id="checkybox" value="yes">
-            <label for="">Return?</label>
-        </div>
-        <button class="calculate">CALCULATE</button>
+            <label>Select location:</label>
+            <select>
+                <option value="Khayelitsha">Khayelitsha</option>
+                <option value="Dunoon">Dunoon</option>
+                <option value="Mitchells Plain">Mitchells Plain</option>
+            </select>
 
-    </section>
-    <h1>Travel Details</h1>
+            <div class="">
+                <label for="">Travel times:</label>
+                <div class="radios">
+                    <input type="radio" class="choice" name="peak" id="peak" value="peak">
+                    <label for="">Peak</label>
+                    <br>
+                    <input type="radio" class="choice" name="peak" id="peaks" value="offpeak">
+                    <label for="">Off-peak</label>
+                </div>
 
-    <label>Single Trip Costs : </label> <span class="singleTrip display"></span>
-    <br>
-    <label>No of Single Trips:</label> <span class=" singleNum display"></span>
-    <br>
-    <label>Return Trip Price : </label> <span class="returnPrice display"></span>
-    <br>
-    <label>No of Return Trips: </label> <span class="numReturn display"></span>
-    <br>
+                <div class="returns">
+                    <input type="checkbox" name="checkybox" class="return" id="checkybox" value="yes">
+                    <label for="return">Return?</label>
+                </div>
+                <button class="calculate">CALCULATE</button>
+                <div class="box"><span class="message">✅</span></div>
+                </div>
 
+                
+                
+
+        </section>
+        <h1>Travel Details</h1>
+
+        <label>Single Trip Costs : </label> <span class="singleTrip display"></span>
+        <br>
+        <label>No of Single Trips:</label> <span class=" singleNum display"></span>
+        <br>
+        <label>Return Trip Price : </label> <span class="returnPrice display"></span>
+        <br>
+        <label>No of Return Trips: </label> <span class="numReturn display"></span>
+        <br>
+    </div>
     <script src="./bus.js"></script>
     <script src="./bus.dom.js"></script>
 </body>

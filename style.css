@@ -1,8 +1,50 @@
 .display {
     display: inline-block;
-    padding: 1em;
-    width: 20em;
-    background: rgb(196, 192, 192) ;
+    padding: 0.5em;
+    width: 16em;
+    background: rgb(196, 192, 192);
     margin: 0.2em;
-    
+
+}
+
+.container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    border: 3px solid crimson;
+    margin-left: 15em;
+    margin-right: 15em;
+    border-radius: 3em;
+    background-color: rgb(216, 168, 178);
+}
+
+.returns {
+    float: right;
+}
+
+button {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    background-image: url(./bus.jpg);
+}
+
+.box {
+    text-align: center;
+    padding: 1em;
+    background-color: rgb(236, 124, 124);
+    border: red 2px;
+    border-radius: 4px;
+    display: none;
+}
+
+.boxer {
+    text-align: center;
+    padding: 1em;
+    background-color: rgb(60, 236, 98);
+    border: green 2px;
+    border-radius: 4px;
+    display: none;
 }
