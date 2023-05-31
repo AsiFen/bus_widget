@@ -13,7 +13,7 @@ var numReturn = document.querySelector('.numReturn')
 var bus = BusFunction()
 
 // global variable
-var location = ''
+var location_dep = ''
 
 
 
@@ -21,25 +21,31 @@ var location = ''
 
 selectElem.addEventListener('change', (event) => {
     const { value } = event.target.options[event.target.selectedIndex]
-    location = value
+    location_dep = value
     bus.getStation(value)
 })
 
 // add event listener for button
 btn.addEventListener('click', () => {
-    var radioElem = document.querySelector('input[class="choice"]:checked')
+    var radioElem = document.querySelector('input[name="peak"]:checked')
+
+    bus.getPoints(pointsElem.value)
+    bus.getStation(location_dep)
+
+    console.log(radioElem);
+    console.log(returnSelect);
+
 
     if (radioElem) {
 
-        bus.getPoints(pointsElem.value)
-        bus.getStation(location)
-       console.log(bus.getPeakSelect(radioElem.value))
-        singleTripPrice.innerHTML = bus.pricePerTripSingle()
+        bus.getPeakSelect(radioElem.value)
+        if (returnSelect.checked) {
+            returnPrice.innerHTML = bus.pricePerTripReturn()
+            numReturn.innerHTML = bus.numReturnTrips()
+        }
 
+        singleTripPrice.innerHTML = bus.pricePerTripSingle()
         numSingleTrips.innerHTML = bus.numSingleTrips()
 
-        singleTripPrice.innerHTML = bus.pricePerTripReturn()
-
-        numSingleTrips.innerHTML = bus.numReturnTrips()
     }
 })
